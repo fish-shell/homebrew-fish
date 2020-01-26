@@ -4,10 +4,15 @@ class Fish < Formula
   url "https://github.com/fish-shell/fish-shell/releases/download/3.0.2/fish-3.0.2.tar.gz"
   sha256 "14728ccc6b8e053d01526ebbd0822ca4eb0235e6487e832ec1d0d22f1395430e"
 
+  devel do
+    url "https://github.com/fish-shell/fish-shell/releases/download/3.1b1/fish-3.1b1.tar.gz"
+    sha256 "7847cb2777cc6ea2a18f147a0e567de5bdac4febf6afdfcf867eb45501183a1a"
+  end
+
   head do
     url "https://github.com/fish-shell/fish-shell.git", :shallow => false
 
-    depends_on "doxygen" => :build
+    depends_on "sphinx-doc" => :build
   end
 
   depends_on "cmake" => :build
